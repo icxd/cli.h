@@ -1,17 +1,7 @@
-<div align="center">
-
-# cli.h
-A small header-only library for writing simple CLI tools.
-
-</div>
-
-## Usage
-
-```c
 #include <stdio.h>
 
 #define CLI_IMPLEMENTATION
-#include "cli.h"
+#include "../cli.h"
 
 void cmd_hello(int argc, char **argv) {
     printf("hello, world!\n");
@@ -36,4 +26,3 @@ int main(int argc, char **argv) {
     
     return 0;
 }
-```
