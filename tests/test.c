@@ -8,11 +8,12 @@ void cmd_hello(int argc, char **argv) {
 }
 
 int main(int argc, char **argv) {
-    cli_add_cmd("hello", cmd_hello);
+    cli_cmd_t *hello = cli_add_cmd("hello", cmd_hello);
+    hello->description = "Prints \"Hello, world!\" to the console";
     
     cli_cmd_handler_t cmd_handler = NULL;
     if (argc < 2) {
-        cli_print_usage();
+        cli_print_usage(argc, argv);
         return 1;
     }
 
